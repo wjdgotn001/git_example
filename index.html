@@ -26,7 +26,7 @@
     <meta property="twitter:url" content="https://github.com">
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href=favicon.png"">
+    <!-- <link rel="icon" href=favicon.png""> -->
     <link rel="apple-touch-icon" href="favicon.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -94,7 +94,7 @@
 
     <!-- feature -->
     <section class="section section--feature">
-        <div class="section-summary">
+        <div class="feature-summary">
             <h2 class="summary__title">Welcome home, developers</h2>
             <p class="summary__description">GitHub fosters a fast, flexible, and collaborative development process that lets you work on your own or with others.</p>
         </div>
@@ -105,7 +105,7 @@
         </div>
         <div class="tiles">
             <div class="inner">
-                <ul>
+                <ul class="clearfix">
                     <li>
                         <img src="img/feature-tile__build.png" alt="build">
                         <h3>For everything you build</h3>
@@ -134,11 +134,59 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- where is -->
+    <section class="section section--where-is">
+        <div class="inner">
+            <div class="where-summary">
+                <h2 class="summary__title">Where is GitHub?</h2>
+                <p class="summary__description">GitHub is where people build software. More than 18 million people use GitHub to discover, fork, and contribute to over 48 million projects.</p>
+            </div>
+
+            <div id="map"></div>
+        </div>
+    </section>
+
+    <section class="section section--pricing">
+        <div class="inner">
+            <div class="card">
+                <div class="cell cell1">
+                    <a href="#" class="btn btn--primary">Sign for up GitHub</a>
+                </div>
+                <div class="cell cell2">Public projects are always free. Work together across unlimited private repositories for $7 / month.</div>
+            </div>
+        </div>
+    </section>
+
 
 
 
     
 </div><!--body__container-->
+<script>
+    function initMap() {
+    // 위도(Latitude)와 경도(Longitude)를 삽입, 지도의 최초 위도경도의 수치를 설정
+    const myLatLng = {
+        lat: 37.782293,
+        lng: -122.391240
+    };
+    //new키워드를 작성해서 map을 정의 
+    const map = new google.maps.Map(
+        document.getElementById('map'),
+        {
+            center: myLatLng,
+            scrollwheel: false, //지도안에서 스크롤휠을 사용하지 않는다.
+            zoom: 18
+        }
+    ); 
+    // 지도에서 표시되는 부분(marker)
+    const marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'GitHub'
+    });
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap" async defer></script>
 </body>
 </html>
