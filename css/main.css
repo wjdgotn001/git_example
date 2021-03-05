@@ -213,7 +213,8 @@ header .sub-menu > li > a:hover { color:#4078c0; }
 .tiles ul > li {
     float: left; width:25%; 
     padding:34px 24px; text-align: center; 
-    line-height:1.5; border-right:1px solid #e5e5e5; box-sizing: border-box; }
+    line-height:1.5; border-right:1px solid #e5e5e5; 
+    box-sizing: border-box; }
 
 .tiles ul > li:last-child { border-right:0; }
 
@@ -241,26 +242,24 @@ header .sub-menu > li > a:hover { color:#4078c0; }
 .section--pricing .inner { padding:80px 0; }
 
 .card { 
-    width: 100%; height:98px;
+    display:flex;
     border:1px solid #e5e5e5;
     border-radius:6px;
     box-sizing: border-box; }
 
-.card > .cell { padding:24px; }
+.card > .cell { display:flex; justify-content: center; align-items: center; padding:24px; }
 
 .card > .cell > .btn { height:50px; font-size: 16px; }
 
-.card > .cell1 { float: left;}
-
 .card > .cell2 { 
-    float: right; padding:12px 40px;
+    flex:1;
     line-height:1.5; font-size: 22px; font-weight: 300;
     border-left:1px solid #e5e5e5; box-sizing: border-box; }
 
 /* footer */
 footer > .inner { padding:50px 0; border-top:1px solid #eee; }
 
-footer > .inner > .site-links{ display:flex; }
+footer .site-links { display:flex; }
 
 .site-links > li { font-size:12px; margin-right:10px; color:#767676; }
 
@@ -277,53 +276,6 @@ footer .logo:hover svg { fill:#4078c0; }
 
 /* media */
 @media all and (max-width:1024px){
-    header.section .inner { 
-        max-width:none;
-        height:auto; 
-        padding:0 20px; }
-
-    header .menu-group,
-    header .sign-group { float: none; }
-
-    header .menu-group { display:block; }
-
-    header .main-menu { display:block; margin-bottom:10px; }
-
-    header .main-menu li {  border-top:1px solid #e5e5e5; }
-
-    header .main-menu li > a { padding:16px 0;}
-
-    header .sign-group { display:block; padding:10px 0 20px; }
-
-    header .btn-group { display:block; }
-
-    header .btn-group > .btn { width: 100%; justify-content: center;}
-
-    header .btn-group .sign-in { margin-right:0; margin-bottom:12px; }
-
-    #search-form { margin-top:12px; margin-right:0; }
-
-    #search { width: 100%; height:42px; text-align: center; }
-
-    header .sub-menu { margin-top:12px; margin-right:0; justify-content: center; } 
-    
-    header .toggle { display:none; }
-
-    header .toggle.on { display:block; }
-
-    #toggle-btn { display:block; }
-
-    /* visual */
-    .section--visual { 
-
-    }
-
-    .section--visual .inner { max-width:none; padding:80px 20px; }
-
-    .section--visual .summary { float: none;}
-
-    #sign-form { float: none;}
-
-
+  
 
 }
